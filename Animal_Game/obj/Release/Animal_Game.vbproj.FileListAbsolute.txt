@@ -1,0 +1,13 @@
+C:\Users\Miranda\source\repos\Animal_Game\bin\Release\Animal_Game.exe.config
+C:\Users\Miranda\source\repos\Animal_Game\bin\Release\Animal_Game.exe
+C:\Users\Miranda\source\repos\Animal_Game\bin\Release\Animal_Game.pdb
+C:\Users\Miranda\source\repos\Animal_Game\bin\Release\Animal_Game.xml
+C:\Users\Miranda\source\repos\Animal_Game\bin\Release\Newtonsoft.Json.dll
+C:\Users\Miranda\source\repos\Animal_Game\bin\Release\Newtonsoft.Json.xml
+C:\Users\Miranda\source\repos\Animal_Game\obj\Release\Animal_Game.Resources.resources
+C:\Users\Miranda\source\repos\Animal_Game\obj\Release\Animal_Game.vbproj.GenerateResource.cache
+C:\Users\Miranda\source\repos\Animal_Game\obj\Release\Animal_Game.vbproj.CoreCompileInputs.cache
+C:\Users\Miranda\source\repos\Animal_Game\obj\Release\Animal_Game.vbproj.CopyComplete
+C:\Users\Miranda\source\repos\Animal_Game\obj\Release\Animal_Game.exe
+C:\Users\Miranda\source\repos\Animal_Game\obj\Release\Animal_Game.xml
+C:\Users\Miranda\source\repos\Animal_Game\obj\Release\Animal_Game.pdb
