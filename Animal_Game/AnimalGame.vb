@@ -7,16 +7,12 @@ Module AnimalGame
     Public CurrentNode As Node
 
     Public Const FILE_NAME = "store.json"
-    Public Function StoreFileExists() As Boolean
-        Return File.Exists(FILE_NAME)
-    End Function
 
     Public Sub Main()
-        If Not StoreFileExists() Then
+        If Not File.Exists(FILE_NAME) Then
             HeadNode = New Node("A DOG")
             File.WriteAllText(FILE_NAME, JsonConvert.SerializeObject(HeadNode))
         End If
-
 
         While True
             HeadNode = JsonConvert.DeserializeObject(Of Node)(File.ReadAllText(FILE_NAME))
@@ -24,13 +20,13 @@ Module AnimalGame
             Console.WriteLine("THINK OF AN ANIMAL. I'LL TRY TO FIND IT OUT BY ASKING QUESTIONS")
             Dim inGame = True
             While inGame
-            Dim answer As String
-            If CurrentNode.isAnswer = False Then
-                Console.WriteLine(CurrentNode.Question)
-            Else
+                Dim answer As String
+                If CurrentNode.isAnswer = False Then
+                    Console.WriteLine(CurrentNode.Question)
+                Else
                     Console.WriteLine($"IS IT {CurrentNode.Answer}?")
                 End If
-            answer = Console.ReadLine().ToUpper()
+                answer = Console.ReadLine().ToUpper()
                 If answer = "YES" Then
                     If CurrentNode.isAnswer Then
                         Console.WriteLine($"SEE HOW SMART I'M GETTING?")
@@ -45,11 +41,11 @@ Module AnimalGame
                         Console.WriteLine($"PLEASE TYPE IN A QUESTION WHOSE ANSWER IS YES FOR {newAnswer} AND NO FOR {CurrentNode.Answer}")
                         Dim newQuestion = Console.ReadLine.ToUpper.Replace("?", "") & "?"
                         CurrentNode.AddQuestion(newAnswer, newQuestion)
-                            Console.WriteLine($"I'LL DO BETTER NEXT TIME")
-                            File.WriteAllText(FILE_NAME, JsonConvert.SerializeObject(HeadNode))
-                            inGame = False
-                        Else
-                            CurrentNode = CurrentNode.NoNode
+                        Console.WriteLine($"I'LL DO BETTER NEXT TIME")
+                        File.WriteAllText(FILE_NAME, JsonConvert.SerializeObject(HeadNode))
+                        inGame = False
+                    Else
+                        CurrentNode = CurrentNode.NoNode
                     End If
                 Else
                     Console.WriteLine("PLEASE ANSWER YES/NO")
